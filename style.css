@@ -1,0 +1,14 @@
+body {
+    margin: 0px;
+    background-color: rgb(17, 39, 29);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
