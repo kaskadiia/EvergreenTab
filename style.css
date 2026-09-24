@@ -4,7 +4,7 @@ body {
     background-size: cover;
     height: 100vh;
     overflow: hidden;
-    font-family: 'Italianno';
+    font-family: 'Italianno', 'Times New Roman', Times, serif;
     font-size: x-large;
     color: rgba(255,255,255,1);
     text-align: center;
@@ -17,16 +17,17 @@ h1 {
     font-size: 96px;
     text-shadow: 0 0 8px rgba(155,155,155,1);
     margin-top: -48px;
+    font-family: 'Fraunces', 'Times New Roman', Times, serif;
 }
 
 h3 {
     font-size: 32px;
     text-shadow: 0 0 4px rgba(155,155,155,1);
-    margin-top: -84px;
+    margin-top: -72px;
 }
 
 .search-bar {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Fraunces', 'Times New Roman', Times, serif;
     font-size: 16px;
     height: 48px;
     width: 192px;
@@ -55,7 +56,7 @@ h3 {
 }
 
 .search-button {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Fraunces', 'Times New Roman', Times, serif;
     font-size: 16px;
     margin-left: 16px;
     height: 48px;
