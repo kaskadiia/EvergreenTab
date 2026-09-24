@@ -14,8 +14,15 @@ body {
 }
 
 h1 {
-    font-size: 64px;
+    font-size: 96px;
     text-shadow: 0 0 8px rgba(155,155,155,1);
+    margin-top: -48px;
+}
+
+h3 {
+    font-size: 32px;
+    text-shadow: 0 0 4px rgba(155,155,155,1);
+    margin-top: -84px;
 }
 
 .search-bar {

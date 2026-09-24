@@ -8,15 +8,19 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
     </head>
     <body>
-        <h1>EvergreenTab</h1>
-        <search>
-            <form action="https://google.com/search" method="get">
-                <input class="search-bar" type="search" id="search-tab" placeholder="Search the web..." name="q" required>
-                <button class="search-button" type="submit">Search</button>
-            </form>
-        </search>
+        <div>
+            <h3>EvergreenTab</h3>
+            <h1 id="local-time">12:00</h1>
+            <h3 id="local-date">Sunday, January 1</h3>
+            <search style="margin-top: -16px">
+                <form action="https://google.com/search" method="get">
+                    <input class="search-bar" type="search" id="search-tab" placeholder="Search the web..." name="q" required>
+                    <button class="search-button" type="submit">Search</button>
+                </form>
+            </search>
+        </div>
     </body>
+    <script src="script.js"></script>
 </html>
