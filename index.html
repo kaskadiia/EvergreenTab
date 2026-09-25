@@ -13,12 +13,27 @@
             <h3>EvergreenTab</h3>
             <h1 id="local-time">12:00</h1>
             <h3 id="local-date">Sunday, January 1</h3>
-            <search style="margin-top: -16px">
-                <form action="https://google.com/search" method="get">
+            <div style="margin-top: -16px; display: flex; justify-content: center;">
+                <div class="dropdown">
+                    <button id="dropdown-button" class="dropdown-button">
+                        <img src="icons/google-icon.svg" id="engine-image" class="engine-image">
+                    </button>
+                    <div id="dropdown-content" class="dropdown-content transparent">
+                        <button class="engine-selector" name="google">
+                            <img src="icons/google-icon.svg">
+                            <span>Google</span>
+                        </button>
+                        <button class="engine-selector" name="duckduckgo">
+                            <img src="icons/duckduckgo-icon.svg">
+                            <span>DuckDuckGo</span>
+                        </button>
+                    </div>
+                </div>
+                <form id="search-bar" action="https://google.com/search" method="get" style="max-width: 80v;">
                     <input class="search-bar" type="search" id="search-tab" placeholder="Search the web..." name="q" required>
                     <button class="search-button" type="submit">Search</button>
                 </form>
-            </search>
+            </div>
         </div>
     </body>
     <script src="script.js"></script>

@@ -18,6 +18,7 @@ h1 {
     text-shadow: 0 0 8px rgba(155,155,155,1);
     margin-top: -48px;
     font-family: 'Fraunces', 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 h3 {
@@ -29,8 +30,10 @@ h3 {
 .search-bar {
     font-family:'Fraunces', 'Times New Roman', Times, serif;
     font-size: 16px;
+    margin-left: 16px;
     height: 48px;
-    width: 192px;
+    width: 480px;
+    max-width: 50vw;
     background-color: rgba(155,155,155,0.05);
     color: rgba(255,255,255,1);
     border-radius: 8px;
@@ -38,6 +41,7 @@ h3 {
     border-width: 1px;
     border-color: rgba(155,155,155,0.2);
     outline: none;
+    cursor: text;
 
     transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
 }
@@ -67,11 +71,97 @@ h3 {
     border-style: solid;
     border-width: 1px;
     border-color: rgba(155,155,155,0.2);
-    outline: none;
+    cursor: pointer;
+
+    transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
 }
 
 .search-button:hover {
     background-color: rgba(155,155,155,0.1);
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.engine-image {
+    height: 32px;
+    width: 32px;
+}
+
+.dropdown-button {
+    font-size: 16px;
+    height: 48px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(155,155,155,0.05);
+    color: rgba(255,255,255,1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(155,155,155,0.2);
+    outline: none;
+    cursor: pointer;
 
     transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
+}
+
+.dropdown-content {
+    font-family: 'Fraunces', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: auto;
+    width: 192px;
+    position: absolute;
+    align-items: start;
+    margin-top: 64px;
+    background-color: rgba(155,155,155,0.05);
+    color: rgba(255,255,255,1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(155,155,155,0.2);
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
+}
+
+.engine-selector {
+    font-family: 'Fraunces', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    width: 192px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    background-color: rgba(155,155,155,0.0);
+    color: rgba(255,255,255,1);
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
+}
+
+.engine-selector:hover {
+    background-color: rgba(155,155,155,0.1);
+}
+
+.engine-selector img {
+    width: 32px;
+    height: 32px;
+}
+
+.engine-selector span {
+    margin-left: 16px
+}
+
+.transparent {
+    opacity: 0;
+    display: none;
 }

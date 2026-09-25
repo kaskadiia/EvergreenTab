@@ -15,3 +15,36 @@ function fetchTime(){
 
 fetchTime()
 setInterval(fetchTime,1000)
+
+// Search Engine
+
+const engines = {
+    google: {
+        query: "https://google.com/search?q=",
+        icon: "icons/google-icon.svg",
+    },
+    duckduckgo: {
+        query: "https://duckduckgo.com/?q=",
+        icon: "icons/duckduckgo-icon.svg",
+    },
+}
+const engineButton = document.getElementById("dropdown-button")
+const engineButtonIcon = document.getElementById("engine-image")
+const searchBar = document.getElementById("search-bar")
+const dropdownContent = document.getElementById("dropdown-content")
+
+engineButton.addEventListener("click", function(){
+    dropdownContent.classList.toggle("transparent")
+})
+
+function setEngine(engine){
+    engineButtonIcon.src = engines[engine].icon
+    searchBar.action = engines[engine].query
+}
+
+document.querySelectorAll(".engine-selector").forEach(function(selector){
+    selector.addEventListener("click", function(){
+        setEngine(selector.name)
+        dropdownContent.classList.toggle("transparent")
+    })
+})
