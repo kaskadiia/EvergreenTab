@@ -64,7 +64,10 @@ h3 {
     font-size: 16px;
     margin-left: 16px;
     height: 48px;
-    width: 64px;
+    width: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(155,155,155,0.05);
     color: rgba(255,255,255,1);
     border-radius: 8px;
@@ -110,6 +113,10 @@ h3 {
     transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
 }
 
+.dropdown-button:hover {
+    background-color: rgba(155,155,155,0.1);
+}
+
 .dropdown-content {
     font-family: 'Fraunces', 'Times New Roman', Times, serif;
     font-size: 16px;
@@ -134,7 +141,7 @@ h3 {
     font-family: 'Fraunces', 'Times New Roman', Times, serif;
     font-size: 16px;
     width: 192px;
-    height: 48px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: start;
@@ -153,8 +160,9 @@ h3 {
 }
 
 .engine-selector img {
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
 }
 
 .engine-selector span {

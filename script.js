@@ -23,10 +23,22 @@ const engines = {
         query: "https://google.com/search?q=",
         icon: "icons/google-icon.svg",
     },
+    bing: {
+        query: "https://bing.com/search?q=",
+        icon: "icons/bing-icon.svg",
+    },
     duckduckgo: {
         query: "https://duckduckgo.com/?q=",
         icon: "icons/duckduckgo-icon.svg",
     },
+    brave: {
+        query: "https://search.brave.com/search?q=",
+        icon: "icons/brave-icon.svg",
+    },
+    yahoo: {
+        query: "https://search.yahoo.com/search?q=",
+        icon: "icons/yahoo-icon.svg",
+    }
 }
 const engineButton = document.getElementById("dropdown-button")
 const engineButtonIcon = document.getElementById("engine-image")

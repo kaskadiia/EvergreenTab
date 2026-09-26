@@ -13,7 +13,7 @@
             <h3>EvergreenTab</h3>
             <h1 id="local-time">12:00</h1>
             <h3 id="local-date">Sunday, January 1</h3>
-            <div style="margin-top: -16px; display: flex; justify-content: center;">
+            <div style="margin-top: -16px; display: flex; flex-direction: row; justify-content: center; align-items: center;">
                 <div class="dropdown">
                     <button id="dropdown-button" class="dropdown-button">
                         <img src="icons/google-icon.svg" id="engine-image" class="engine-image">
@@ -23,15 +23,29 @@
                             <img src="icons/google-icon.svg">
                             <span>Google</span>
                         </button>
+                        <button class="engine-selector" name="bing">
+                            <img src="icons/bing-icon.svg">
+                            <span>Bing</span>
+                        </button>
                         <button class="engine-selector" name="duckduckgo">
                             <img src="icons/duckduckgo-icon.svg">
                             <span>DuckDuckGo</span>
                         </button>
+                        <button class="engine-selector" name="brave">
+                            <img src="icons/brave-icon.svg">
+                            <span>Brave</span>
+                        </button>
+                        <button class="engine-selector" name="yahoo">
+                            <img src="icons/yahoo-icon.svg">
+                            <span>Yahoo</span>
+                        </button>
                     </div>
                 </div>
-                <form id="search-bar" action="https://google.com/search" method="get" style="max-width: 80v;">
-                    <input class="search-bar" type="search" id="search-tab" placeholder="Search the web..." name="q" required>
-                    <button class="search-button" type="submit">Search</button>
+                <form id="search-bar" action="https://google.com/search" method="get" style="max-width: 80v; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <input class="search-bar" type="search" id="search-tab" placeholder="Search the web..." name="q" autocomplete="off" required>
+                    <button class="search-button" type="submit">
+                        <img src="icons/search-icon.png" class="engine-image">
+                    </button>
                 </form>
             </div>
         </div>
