@@ -82,7 +82,7 @@ setInterval(async function(){
         localStorage.setItem("lastHour", toString(curHour))
         
         try {
-            const response = await fetch(`https://api.pexels.com/v1/search?query=green%20nature&per_page=25&page=${pageNumber}`, {
+            const response = await fetch(`https://api.pexels.com/v1/search?query=greenery&per_page=25&page=${pageNumber}`, {
                 method: "GET",
                 headers: {
                     Authorization: pexelsAPI,
