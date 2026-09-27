@@ -44,6 +44,7 @@ const engineButton = document.getElementById("dropdown-button")
 const engineButtonIcon = document.getElementById("engine-image")
 const searchBar = document.getElementById("search-bar")
 const dropdownContent = document.getElementById("dropdown-content")
+var curEngine = localStorage.getItem("engine") || "google"
 
 engineButton.addEventListener("click", function(){
     dropdownContent.classList.toggle("transparent")
@@ -52,11 +53,15 @@ engineButton.addEventListener("click", function(){
 function setEngine(engine){
     engineButtonIcon.src = engines[engine].icon
     searchBar.action = engines[engine].query
+    localStorage.setItem("engine",engine)
 }
 
 document.querySelectorAll(".engine-selector").forEach(function(selector){
     selector.addEventListener("click", function(){
-        setEngine(selector.name)
+        curEngine = selector.name
+        setEngine(curEngine)
         dropdownContent.classList.toggle("transparent")
     })
 })
+
+setEngine(curEngine)
