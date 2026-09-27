@@ -68,11 +68,50 @@ setEngine(curEngine)
 
 // Pexels Photos
 
-import { createClient } from "pexels"
-
 const pexelsAPI = import.meta.env.VITE_PEXELS_API_KEY
-const client = createClient(pexelsAPI)
+const pageNumber = Math.floor(Math.random() * 10) + 1
 
-client.photos.search({ query: "nature", per_page: 5 }).then(function(response){
-  console.log('fetched photos:', response.photos)
+var curBackgroundImage = localStorage.getItem("backgroundImage") || "url(https://images.pexels.com/photos/13248795/pexels-photo-13248795.jpeg)"
+document.body.style.backgroundImage = curBackgroundImage
+
+var lastHour = Number(localStorage.getItem("lastHour")) || new Date().getMinutes() // random images every hour
+setInterval(async function(){
+    var curHour = new Date().getMinutes()
+    if (curHour !== lastHour) {
+        lastHour = curHour
+        localStorage.setItem("lastHour", toString(curHour))
+        
+        try {
+            const response = await fetch(`https://api.pexels.com/v1/search?query=green%20nature&per_page=25&page=${pageNumber}`, {
+                method: "GET",
+                headers: {
+                    Authorization: pexelsAPI,
+                    Accept: "application/json"
+                }
+            })
+
+            if (!response.ok) {
+                throw new Error(`HTTP ERROR: status: ${response.status}`)
+            }
+
+            const data = await response.json()
+            const randomPhoto = data.photos[Math.floor(Math.random() * data.photos.length)]
+
+            curBackgroundImage = `url(${randomPhoto.src.original})`
+            localStorage.setItem("backgroundImage",`url(${randomPhoto.src.original})`)
+        } catch(error) {
+            console.error("Error getting images from Pexels: ", error)
+        }
+
+        document.body.style.backgroundImage = curBackgroundImage
+    }
+},1000)
+
+// Settings
+
+const settingsButton = document.getElementById("settings-button")
+const settingsPage = document.getElementById("settings-page")
+
+settingsButton.addEventListener("click", function(){
+    settingsPage.classList.toggle("transparent")
 })

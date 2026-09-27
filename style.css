@@ -1,5 +1,6 @@
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     background-color: rgb(17, 39, 29);
     background-size: cover;
     height: 100vh;
@@ -15,7 +16,7 @@ body {
 
 h1 {
     font-size: 96px;
-    text-shadow: 0 0 8px rgba(155,155,155,1);
+    text-shadow: 0 0 8px rgba(0,0,0,1);
     margin-top: -48px;
     font-family: 'Fraunces', 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -23,7 +24,7 @@ h1 {
 
 h3 {
     font-size: 32px;
-    text-shadow: 0 0 4px rgba(155,155,155,1);
+    text-shadow: 0 0 4px rgba(0,0,0,1);
     margin-top: -72px;
 }
 
@@ -34,12 +35,13 @@ h3 {
     height: 48px;
     width: 480px;
     max-width: 50vw;
-    background-color: rgba(155,155,155,0.05);
+    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(4px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(155,155,155,0.2);
+    border-color: rgba(155, 155, 155, 0.5);
     outline: none;
     cursor: text;
 
@@ -51,12 +53,12 @@ h3 {
 }
 
 .search-bar:hover {
-    background-color: rgba(155,155,155,0.1);
+    background-color: rgba(55,55,55,0.9);
 }
 
 .search-bar:focus {
-    background-color: rgba(155,155,155,0.1);
-    box-shadow: 0 0 8px 4px rgba(155,155,155,0.05);
+    background-color: rgba(55,55,55,0.9);
+    box-shadow: 0 0 8px 4px rgba(55,55,55,0.25);
 }
 
 .search-button {
@@ -68,19 +70,20 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(155,155,155,0.05);
+    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(4px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(155,155,155,0.2);
+    border-color: rgba(155, 155, 155, 0.5);
     cursor: pointer;
 
     transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
 }
 
 .search-button:hover {
-    background-color: rgba(155,155,155,0.1);
+    background-color: rgba(55,55,55,0.9);
 }
 
 .dropdown {
@@ -101,12 +104,13 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(155,155,155,0.05);
+    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(4px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(155,155,155,0.2);
+    border-color: rgba(155, 155, 155, 0.5);
     outline: none;
     cursor: pointer;
 
@@ -114,7 +118,7 @@ h3 {
 }
 
 .dropdown-button:hover {
-    background-color: rgba(155,155,155,0.1);
+    background-color: rgba(55,55,55,0.9);
 }
 
 .dropdown-content {
@@ -125,12 +129,13 @@ h3 {
     position: absolute;
     align-items: start;
     margin-top: 64px;
-    background-color: rgba(155,155,155,0.05);
+    backdrop-filter: blur(4px);
+    background-color: rgba(55,55,55,0.75);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
     border-width: 1px;
-    border-color: rgba(155,155,155,0.2);
+    border-color: rgba(155, 155, 155, 0.5);
     outline: none;
     cursor: pointer;
 
@@ -146,7 +151,7 @@ h3 {
     align-items: center;
     justify-content: start;
     text-align: center;
-    background-color: rgba(155,155,155,0.0);
+    background-color: rgba(55,55,55,0);
     color: rgba(255,255,255,1);
     border-style: none;
     outline: none;
@@ -156,7 +161,7 @@ h3 {
 }
 
 .engine-selector:hover {
-    background-color: rgba(155,155,155,0.1);
+    background-color: rgba(55,55,55,0.25);
 }
 
 .engine-selector img {
@@ -172,4 +177,51 @@ h3 {
 .transparent {
     opacity: 0;
     display: none;
+}
+
+.settings-button {
+    font-family: 'Fraunces', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: 48px;
+    width: 48px;
+    position:absolute;
+    top:16px;
+    left:16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(4px);
+    color: rgba(255,255,255,1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(155, 155, 155, 0.5);
+    cursor: pointer;
+
+    transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
+}
+
+.settings-button:hover {
+    background-color: rgba(55,55,55,0.9);
+}
+
+.settings-page {
+    font-family: 'Italianno', 'Times New Roman', Times, serif;
+    font-size: 16px;
+    height: 80vh;
+    width: 25vw;
+    max-width: 360px;
+    position: absolute;
+    top: 80px;
+    left: 16px;
+    align-items: start;
+    backdrop-filter: blur(4px);
+    background-color: rgba(55,55,55,0.75);
+    color: rgba(255,255,255,1);
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgba(155, 155, 155, 0.5);
+    outline: none;
 }
