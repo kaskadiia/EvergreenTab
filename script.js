@@ -65,3 +65,14 @@ document.querySelectorAll(".engine-selector").forEach(function(selector){
 })
 
 setEngine(curEngine)
+
+// Pexels Photos
+
+import { createClient } from "pexels"
+
+const pexelsAPI = import.meta.env.VITE_PEXELS_API_KEY
+const client = createClient(pexelsAPI)
+
+client.photos.search({ query: "nature", per_page: 5 }).then(function(response){
+  console.log('fetched photos:', response.photos)
+})
