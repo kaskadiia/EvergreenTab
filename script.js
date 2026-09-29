@@ -69,7 +69,7 @@ setEngine(curEngine)
 // Pexels Photos
 
 const pexelsAPI = import.meta.env.VITE_PEXELS_API_KEY
-const pageNumber = Math.floor(Math.random() * 10) + 1
+const pageNumber = Math.floor(Math.random() * 50) + 1
 
 var curBackgroundImage = localStorage.getItem("backgroundImage") || "url(https://images.pexels.com/photos/13248795/pexels-photo-13248795.jpeg)"
 document.body.style.backgroundImage = curBackgroundImage

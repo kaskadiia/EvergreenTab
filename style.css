@@ -3,6 +3,8 @@ body {
     padding: 0;
     background-color: rgb(17, 39, 29);
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 100vh;
     overflow: hidden;
     font-family: 'Italianno', 'Times New Roman', Times, serif;
@@ -35,8 +37,8 @@ h3 {
     height: 48px;
     width: 480px;
     max-width: 50vw;
-    background-color: rgba(55,55,55,0.75);
-    backdrop-filter: blur(4px);
+    background-color: rgba(155,155,155,0.05);
+    backdrop-filter: blur(16px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
@@ -49,16 +51,28 @@ h3 {
 }
 
 .search-bar::placeholder {
-    color: rgba(155,155,155,1);
+    color: rgba(200,200,200,1);
 }
 
 .search-bar:hover {
-    background-color: rgba(55,55,55,0.9);
+    background-color: rgba(125,125,125,0.05);
 }
 
 .search-bar:focus {
-    background-color: rgba(55,55,55,0.9);
-    box-shadow: 0 0 8px 4px rgba(55,55,55,0.25);
+    background-color: rgba(125,125,125,0.05);
+    box-shadow: 0 0 8px 4px rgba(155,155,155,0.1);
+}
+
+.search-bar::-webkit-search-decoration,
+.search-bar::-webkit-search-cancel-button,
+.search-bar::-webkit-search-results-button,
+.search-bar::-webkit-search-decoration {
+    display: none;
+}
+
+.search-bar::-ms-clear,
+.search-bar::-ms-reveal {
+    display: none;
 }
 
 .search-button {
@@ -70,8 +84,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(55,55,55,0.75);
-    backdrop-filter: blur(4px);
+    background-color: rgba(155,155,155,0.05);
+    backdrop-filter: blur(16px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
@@ -83,7 +97,7 @@ h3 {
 }
 
 .search-button:hover {
-    background-color: rgba(55,55,55,0.9);
+    background-color: rgba(125,125,125,0.05);
 }
 
 .dropdown {
@@ -104,8 +118,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(55,55,55,0.75);
-    backdrop-filter: blur(4px);
+    background-color: rgba(155,155,155,0.05);
+    backdrop-filter: blur(16px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
@@ -118,7 +132,7 @@ h3 {
 }
 
 .dropdown-button:hover {
-    background-color: rgba(55,55,55,0.9);
+    background-color: rgba(125,125,125,0.05);
 }
 
 .dropdown-content {
@@ -129,8 +143,8 @@ h3 {
     position: absolute;
     align-items: start;
     margin-top: 64px;
-    backdrop-filter: blur(4px);
-    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(16px);
+    background-color: rgba(155,155,155,0.05);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
@@ -151,7 +165,7 @@ h3 {
     align-items: center;
     justify-content: start;
     text-align: center;
-    background-color: rgba(55,55,55,0);
+    background-color: rgba(155,155,155,0);
     color: rgba(255,255,255,1);
     border-style: none;
     outline: none;
@@ -161,7 +175,7 @@ h3 {
 }
 
 .engine-selector:hover {
-    background-color: rgba(55,55,55,0.25);
+    background-color: rgba(155,155,155,0.05);
 }
 
 .engine-selector img {
@@ -190,8 +204,8 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(55,55,55,0.75);
-    backdrop-filter: blur(4px);
+    background-color: rgba(155,155,155,0.05);
+    backdrop-filter: blur(16px);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
@@ -203,7 +217,7 @@ h3 {
 }
 
 .settings-button:hover {
-    background-color: rgba(55,55,55,0.9);
+    background-color: rgba(125,125,125,0.05);
 }
 
 .settings-page {
@@ -216,8 +230,8 @@ h3 {
     top: 80px;
     left: 16px;
     align-items: start;
-    backdrop-filter: blur(4px);
-    background-color: rgba(55,55,55,0.75);
+    backdrop-filter: blur(16px);
+    background-color: rgba(155,155,155,0.05);
     color: rgba(255,255,255,1);
     border-radius: 8px;
     border-style: solid;
