@@ -17,27 +17,32 @@ fetchTime()
 setInterval(fetchTime,1000)
 
 // Search Engine
+import googleIcon from "./icons/google-icon.svg"
+import bingIcon from "./icons/bing-icon.svg"
+import duckduckgoIcon from "./icons/duckduckgo-icon.svg"
+import braveIcon from "./icons/brave-icon.svg"
+import yahooIcon from "./icons/yahoo-icon.svg"
 
 const engines = {
     google: {
         query: "https://google.com/search?q=",
-        icon: new URL("./icons/google-icon.svg", import.meta.url).href,
+        icon: googleIcon,
     },
     bing: {
         query: "https://bing.com/search?q=",
-        icon: new URL("./icons/bing-icon.svg", import.meta.url).href,
+        icon: bingIcon,
     },
     duckduckgo: {
         query: "https://duckduckgo.com/?q=",
-        icon: new URL("./icons/duckduckgo-icon.svg", import.meta.url).href,
+        icon: duckduckgoIcon,
     },
     brave: {
         query: "https://search.brave.com/search?q=",
-        icon: new URL("./icons/brave-icon.svg", import.meta.url).href,
+        icon: braveIcon,
     },
     yahoo: {
         query: "https://search.yahoo.com/search?q=",
-        icon: new URL("./icons/yahoo-icon.svg", import.meta.url).href,
+        icon: yahooIcon,
     }
 }
 const engineButton = document.getElementById("dropdown-button")
