@@ -21,23 +21,23 @@ setInterval(fetchTime,1000)
 const engines = {
     google: {
         query: "https://google.com/search?q=",
-        icon: "icons/google-icon.svg",
+        icon: new URL("./icons/google-icon.svg", import.meta.url).href,
     },
     bing: {
         query: "https://bing.com/search?q=",
-        icon: "icons/bing-icon.svg",
+        icon: new URL("./icons/bing-icon.svg", import.meta.url).href,
     },
     duckduckgo: {
         query: "https://duckduckgo.com/?q=",
-        icon: "icons/duckduckgo-icon.svg",
+        icon: new URL("./icons/duckduckgo-icon.svg", import.meta.url).href,
     },
     brave: {
         query: "https://search.brave.com/search?q=",
-        icon: "icons/brave-icon.svg",
+        icon: new URL("./icons/brave-icon.svg", import.meta.url).href,
     },
     yahoo: {
         query: "https://search.yahoo.com/search?q=",
-        icon: "icons/yahoo-icon.svg",
+        icon: new URL("./icons/yahoo-icon.svg", import.meta.url).href,
     }
 }
 const engineButton = document.getElementById("dropdown-button")
@@ -66,6 +66,15 @@ document.querySelectorAll(".engine-selector").forEach(function(selector){
 
 setEngine(curEngine)
 
+// Settings
+
+const settingsButton = document.getElementById("settings-button")
+const settingsPage = document.getElementById("settings-page")
+
+settingsButton.addEventListener("click", function(){
+    settingsPage.classList.toggle("transparent")
+})
+
 // Pexels Photos
 
 const pexelsAPI = import.meta.env.VITE_PEXELS_API_KEY
@@ -74,9 +83,9 @@ const pageNumber = Math.floor(Math.random() * 50) + 1
 var curBackgroundImage = localStorage.getItem("backgroundImage") || "url(https://images.pexels.com/photos/13248795/pexels-photo-13248795.jpeg)"
 document.body.style.backgroundImage = curBackgroundImage
 
-var lastHour = Number(localStorage.getItem("lastHour")) || new Date().getMinutes() // random images every hour
+var lastHour = Number(localStorage.getItem("lastHour")) || new Date().getHours() // random images every hour
 setInterval(async function(){
-    var curHour = new Date().getMinutes()
+    var curHour = new Date().getHours()
     if (curHour !== lastHour) {
         lastHour = curHour
         localStorage.setItem("lastHour", toString(curHour))
@@ -106,12 +115,3 @@ setInterval(async function(){
         document.body.style.backgroundImage = curBackgroundImage
     }
 },1000)
-
-// Settings
-
-const settingsButton = document.getElementById("settings-button")
-const settingsPage = document.getElementById("settings-page")
-
-settingsButton.addEventListener("click", function(){
-    settingsPage.classList.toggle("transparent")
-})
