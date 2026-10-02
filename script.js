@@ -73,12 +73,12 @@ setEngine(curEngine)
 
 // Settings
 
-const settingsButton = document.getElementById("settings-button")
+/*const settingsButton = document.getElementById("settings-button")
 const settingsPage = document.getElementById("settings-page")
 
 settingsButton.addEventListener("click", function(){
     settingsPage.classList.toggle("transparent")
-})
+})*/
 
 // Pexels Photos
 
