@@ -152,6 +152,7 @@ h3 {
     border-color: rgba(155, 155, 155, 0.5);
     outline: none;
     cursor: pointer;
+    z-index: 1;
 
     transition: 0.1s cubic-bezier(0.42, 0, 1, 1)
 }
