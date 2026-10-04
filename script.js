@@ -93,7 +93,7 @@ setInterval(async function(){
     var curHour = new Date().getHours()
     if (curHour !== lastHour) {
         lastHour = curHour
-        localStorage.setItem("lastHour", toString(curHour))
+        localStorage.setItem("lastHour", String(curHour))
         
         try {
             const response = await fetch(`https://api.pexels.com/v1/search?query=greenery&per_page=25&page=${pageNumber}`, {
